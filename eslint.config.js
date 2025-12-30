@@ -15,6 +15,9 @@ import globals from 'globals';
 import licenseHeader from 'eslint-plugin-license-header';
 import path from 'node:path';
 import url from 'node:url';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 // --- ESM way to get __dirname ---
 const __filename = url.fileURLToPath(import.meta.url);
